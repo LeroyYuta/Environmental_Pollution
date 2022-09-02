@@ -1,0 +1,184 @@
+// Стили для header (Лера)
+$fontFam: 'Montserrat';
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1199px) {
+    .nav__logo {
+        margin-left: 2%;
+    }
+
+    .nav__button {
+        margin-right: 2%;
+    }
+
+    .nav__links {
+        margin-left: 2%;
+    }
+    
+}
+
+@media screen and (max-width: 481px) {
+    .nav__logo {
+        >img {
+            width: 80%;
+        }
+    }
+
+    .nav__button {
+        margin-right: 2%;
+    }
+
+    .nav__links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__title-text {
+        >h1 {
+            font-size: 18px;
+        }
+        >p {
+            font-size: 18px;
+        }
+    }
+}
+
+body {
+    margin: 0 auto;
+    font-family: $fontFam;
+
+    .header {
+        height: 100vh;
+
+        .nav-color {
+            background-color: rgba(0, 0, 0, 0.909);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+
+            .nav__links {
+                >a {
+                    text-decoration: none;
+                    color: #fff;
+                    margin-right: 20px;
+
+                    &:hover {
+                        color: rgba(6, 198, 6, 0.655);
+                        transition: .3s;
+                    }
+                }
+            }
+
+            .nav__button {
+                >button {
+                    padding: 20px;
+                    color: #fff;
+                    background-color: rgba(6, 198, 6, 0.655);
+                    border: 1px solid rgba(0, 0, 0, 0.909);
+                    font-family: $fontFam;
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: #fff;
+                        color: rgba(6, 198, 6, 0.655);
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+
+        .header__title-bgpict {
+            background: url(../img/header/bg1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            .header__title-text {
+                max-width: 700px;
+                padding: 50px 0;
+                font-size: 1.5em;
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.513);
+
+                >h1,
+                h2,
+                p {
+                    padding-left: 2%;
+                }
+
+                >a {
+                    >button {
+                        margin-left: 2%;
+                        padding: 20px;
+                        color: #fff;
+                        background-color: rgba(6, 198, 6, 0.655);
+                        border: 1px solid rgba(6, 198, 6, 0.655);
+                        font-family: $fontFam;
+                        font-weight: 600;
+
+                        &:hover {
+                            background-color: #fff;
+                            color: rgba(6, 198, 6, 0.655);
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Конец стилей для header (Лера)
+
+// Стили для формы регистрации
+
+$green-color: rgba(6, 198, 6, 0.655);
+$darkgreen-color:#4C6816;
+$dark-color:#282623;
+$grey-color:#A3A599;
+$yellow-color:#FBCD4B;
+
+.registration_form {
+    max-width: 25rem;
+    padding: 5px;
+    padding-bottom: 30px;
+    margin: 10px auto;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: $fontFam !important;
+
+    .btn {
+        padding: 5px 10px;
+        background-color: $green-color;
+        color: #fff;
+        border: none;
+        font-size: 1.2rem;
+    }
+    .btn:focus, .btn:active {
+        box-shadow: none !important;
+    }
+    
+    #errorMessage {
+        text-align: center;
+        color: $darkgreen-color;
+    }
+    
+    p {
+        font-size: small;
+    }
+}
+
+.footer {
+    display: flex;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.909);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
